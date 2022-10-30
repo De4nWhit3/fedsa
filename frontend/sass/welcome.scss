@@ -49,3 +49,33 @@
         box-shadow: 0 0 4px 4px $blue-bright;
     }
 }
+
+
+@keyframes colorful {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.rainbow-text {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(33%, #de66a9),
+        color-stop(66%, #97ed2d),
+        to(#45a1e6)
+    );
+
+    background-image: linear-gradient(90deg, #de66a9 33%, #97ed2d 66%, #45a1e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: colorful;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+  
